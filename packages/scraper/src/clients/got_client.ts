@@ -69,13 +69,13 @@ export class GotScrapingClient extends FetchClient<GotClientFetchResponse> {
 		};
 	}
 
-	async buffer(url: string, attempts = 0): Promise<ArrayBufferLike | null> {
+	async buffer(url: string, attempts = 0): Promise<ArrayBuffer | null> {
 		const pool = await this.getSessionPool();
 		const { response, badSession } = await this.getResponse(url, pool);
 		if (badSession && attempts === 0) {
 			return this.buffer(url, attempts + 1);
 		}
-		return response.rawBody.buffer;
+		return response.rawBody.buffer as ArrayBuffer;
 	}
 
 	teardown(): Promise<void> | void {}

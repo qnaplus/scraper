@@ -78,7 +78,7 @@ export const pingQna = async (
 ): Promise<boolean> => {
 	const { client, teardown } = await getDefaultFetcherOptions(options);
 	const url = buildHomeQnaUrl({ program, season });
-	const ok = client.ping(url);
+	const ok = await client.ping(url);
 	options?.logger?.trace({
 		exists: ok,
 		label: "pingQna",

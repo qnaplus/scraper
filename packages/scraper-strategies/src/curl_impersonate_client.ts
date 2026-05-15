@@ -8,7 +8,7 @@ import {
 	type RequestPreset,
 	type SafariPresetVersion,
 	getCompatibleBrowsers,
-} from "@qnaplus/node-curl-impersonate";
+} from "ts-curl-impersonate";
 import { FetchClient, type FetchClientResponse } from "@qnaplus/scraper";
 
 export class CurlImpersonateScrapingClient extends FetchClient<FetchClientResponse> {
@@ -71,7 +71,7 @@ export class CurlImpersonateScrapingClient extends FetchClient<FetchClientRespon
 		return latestResponse;
 	}
 
-	async buffer(): Promise<ArrayBufferLike | null> {
+	async buffer(): Promise<ArrayBuffer | null> {
 		// TODO: implement reading response buffer
 		return null;
 	}

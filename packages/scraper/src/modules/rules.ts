@@ -35,7 +35,7 @@ export const extractRules = async (
 			logger?.trace(`Already added rule ${name}, skipping.`);
 			continue;
 		}
-		logger?.debug("Adding new rule: ", name);
+		logger?.debug({ name, summary }, `Adding new rule: ${name}`);
 		rules.push({ name, summary });
 	}
 	if (teardown) {
