@@ -13,7 +13,11 @@
 		"build:clean": "pnpm clean && pnpm build",
 		"test": "vitest --run",
 		"clean": "rm -rf dist tsconfig.tsbuildinfo",
-		"reset": "pnpm clean && rm -rf node_modules"
+		"reset": "pnpm clean && rm -rf node_modules",
+		"lint": "oxlint src",
+		"lint:fix": "oxlint --fix src",
+		"fmt": "oxfmt --check src",
+		"fmt:fix": "oxfmt src"
 	},
 	"dependencies": {
 		"@crawlee/core": "^3.16.0",

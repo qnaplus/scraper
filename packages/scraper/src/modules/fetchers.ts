@@ -23,9 +23,7 @@ import {
 	buildQnaUrlWithPage,
 } from "./parsing";
 
-export interface FetcherOptions<
-	T extends FetchClientResponse = FetchClientResponse,
-> {
+export interface FetcherOptions<T extends FetchClientResponse = FetchClientResponse> {
 	client?: FetchClient<T>;
 	logger?: Logger;
 	teardown?: boolean;
@@ -120,9 +118,7 @@ export const fetchQuestion = async (
  * @param logger Optional {@link Logger}
  * @returns The current season
  */
-export const fetchCurrentSeason = async (
-	options?: FetcherOptions,
-): Promise<Season> => {
+export const fetchCurrentSeason = async (options?: FetcherOptions): Promise<Season> => {
 	const newSeason = await pingQna(
 		"V5RC",
 		`${Constants.CURRENT_YEAR}-${Constants.CURRENT_YEAR + 1}`,
@@ -146,9 +142,7 @@ export const fetchCurrentSeason = async (
  * @param logger Optional {@link Logger}
  * @returns A list of all seasons to date
  */
-export const fetchAllSeasons = async (
-	options?: FetcherOptions,
-): Promise<Season[]> => {
+export const fetchAllSeasons = async (options?: FetcherOptions): Promise<Season[]> => {
 	const allSeasons: Season[] = [];
 	const [start] = (await fetchCurrentSeason(options)).split("-");
 	const startYear = Number.parseInt(start);
@@ -176,9 +170,7 @@ export const fetchPagesForSeasons = async (
 		const url = buildHomeQnaUrl({ program, season });
 		const pageCount = await fetchPageCount(url, options);
 		if (pageCount === null) {
-			options?.logger?.warn(
-				`Warning: unable to retrieve page count for ${url}`,
-			);
+			options?.logger?.warn(`Warning: unable to retrieve page count for ${url}`);
 			continue;
 		}
 		for (let page = 1; page <= pageCount; page++) {
@@ -207,9 +199,7 @@ export const fetchQuestionsFromPage = async (
 	}
 	const urls = extractPageQuestions({ url, html: html.html });
 	options?.logger?.trace({ urls }, `Extracted ${urls.length} urls from ${url}`);
-	const results = await Promise.allSettled(
-		urls.map((u) => fetchQuestion(u, options)),
-	);
+	const results = await Promise.allSettled(urls.map((u) => fetchQuestion(u, options)));
 	const passed: Question[] = [];
 	const failed: QnaIdUrl[] = [];
 	results.forEach((result, i) => {
@@ -251,8 +241,7 @@ export const fetchQuestionsFromPages = async (
 			name: url,
 			job: attempt({
 				attempts: 3,
-				callback: () =>
-					fetchQuestionsFromPage(url, { client, teardown: false }),
+				callback: () => fetchQuestionsFromPage(url, { client, teardown: false }),
 				logger: options?.logger,
 			}),
 		};
@@ -383,9 +372,7 @@ export const fetchQuestionsIterative = async (
 	const startTime = process.hrtime.bigint();
 
 	while (!batchFailed) {
-		options?.logger?.trace(
-			`Scraping question range ${range[0]}-${range.at(-1)}`,
-		);
+		options?.logger?.trace(`Scraping question range ${range[0]}-${range.at(-1)}`);
 		const {
 			questions: batchQuestions,
 			failed,
@@ -393,9 +380,7 @@ export const fetchQuestionsIterative = async (
 		} = await fetchQuestionRange(range, { client, teardown: false });
 		questions.push(...batchQuestions);
 		if (failed) {
-			options?.logger?.info(
-				`Batch failed for range ${range[0]}-${range.at(-1)}, exiting`,
-			);
+			options?.logger?.info(`Batch failed for range ${range[0]}-${range.at(-1)}, exiting`);
 			batchFailed = true;
 		} else {
 			failures.push(...batchFailures);

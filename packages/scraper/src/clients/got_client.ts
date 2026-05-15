@@ -3,11 +3,7 @@ import { SessionPool } from "@crawlee/core";
 // @ts-ignore Okay because we only import a type.
 import type { GotScraping, Response } from "got-scraping";
 import type { Logger } from "pino";
-import {
-	FetchClient,
-	type FetchClientOptions,
-	type FetchClientResponse,
-} from "./fetch_client";
+import { FetchClient, type FetchClientOptions, type FetchClientResponse } from "./fetch_client";
 
 export type BaseGotClientFetchResponse = {
 	readonly response: Response<string>;
@@ -24,8 +20,7 @@ export type GotClientFetchOptions = FetchClientOptions & {
 	trySessionRefresh?: boolean;
 };
 
-export type GotClientFetchResponse = BaseGotClientFetchResponse &
-	FetchClientResponse;
+export type GotClientFetchResponse = BaseGotClientFetchResponse & FetchClientResponse;
 
 // from @crawlee/util
 let gotScraping = (async (...args: Parameters<GotScraping>) => {
@@ -123,9 +118,7 @@ export class GotScrapingClient extends FetchClient<GotClientFetchResponse> {
 		}
 
 		logger?.trace(`Got ${response.statusCode} on ${url}`);
-		const hadBadStatus = session.retireOnBlockedStatusCodes(
-			response.statusCode,
-		);
+		const hadBadStatus = session.retireOnBlockedStatusCodes(response.statusCode);
 		if (hadBadStatus) {
 			logger?.warn(`Warning: Bad status on ${url}, retiring`);
 			return { response, badSession: true };

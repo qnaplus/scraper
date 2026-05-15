@@ -21,19 +21,13 @@ export interface GeneratorOptions {
  * @param program The program of the Q&A to check
  * @param season The season of the Q&A to check
  */
-export const verifyQnaExists = async (
-	program: string,
-	season: Season,
-): Promise<void> => {
+export const verifyQnaExists = async (program: string, season: Season): Promise<void> => {
 	const match = season.match(/(?<start>\d{4})-(?<end>\d{4})/);
 	if (!match?.groups) {
 		throw Error(`${season} does not match the format '{year}-{year}'.`);
 	}
 
-	if (
-		Number.parseInt(match.groups.end) - Number.parseInt(match.groups.start) !==
-		1
-	) {
+	if (Number.parseInt(match.groups.end) - Number.parseInt(match.groups.start) !== 1) {
 		throw Error(`${season} does not match the format '{year}-{year + 1}'`);
 	}
 
@@ -43,10 +37,7 @@ export const verifyQnaExists = async (
 	}
 };
 
-const verifyQnasExist = async (
-	program: string,
-	seasons: Season[],
-): Promise<void> => {
+const verifyQnasExist = async (program: string, seasons: Season[]): Promise<void> => {
 	await Promise.all(seasons.map((s) => verifyQnaExists(program, s)));
 };
 

@@ -1,12 +1,7 @@
 import * as cheerio from "cheerio";
 import SELECTORS from "../selectors";
 import type { Question } from "../types";
-import {
-	type QnaHomeUrl,
-	type QnaIdUrl,
-	type QnaPageUrl,
-	parseQnaUrlWithId,
-} from "./parsing";
+import { type QnaHomeUrl, type QnaIdUrl, type QnaPageUrl, parseQnaUrlWithId } from "./parsing";
 
 export interface ScrapedPage<U extends string = string> {
 	url: U;
@@ -31,34 +26,30 @@ function selectHtml(
 	$: cheerio.CheerioAPI,
 	selectorKey: keyof typeof SELECTORS,
 	required: true,
-	raw?: boolean
+	raw?: boolean,
 ): string;
 function selectHtml(
 	$: cheerio.CheerioAPI,
 	selectorKey: keyof typeof SELECTORS,
 	required: false,
-	raw?: boolean
+	raw?: boolean,
 ): string | null;
 function selectHtml(
 	$: cheerio.CheerioAPI,
 	selectorKey: keyof typeof SELECTORS,
 	required: boolean,
-	raw?: boolean
+	raw?: boolean,
 ): string | null {
 	const selector = SELECTORS[selectorKey];
-	const text = raw
-		? unleak(unformat($(selector).html()))
-		: unleak(unformat($(selector).text()));
+	const text = raw ? unleak(unformat($(selector).html())) : unleak(unformat($(selector).text()));
 	const isEmptyString = text.trim() === "";
 	if (required && isEmptyString) {
-		throw new Error(`Failed to get required selector '${selectorKey}'`)
+		throw new Error(`Failed to get required selector '${selectorKey}'`);
 	}
 	return isEmptyString ? null : text;
 }
 
-export const extractPageQuestions = ({
-	html,
-}: ScrapedPage<QnaPageUrl>): QnaIdUrl[] => {
+export const extractPageQuestions = ({ html }: ScrapedPage<QnaPageUrl>): QnaIdUrl[] => {
 	const $ = cheerio.load(html);
 	return $(SELECTORS.URLS)
 		.toArray()
@@ -69,15 +60,10 @@ export const extractPageQuestions = ({
 export const extractPageCount = ({ html }: ScrapedPage<QnaHomeUrl>): number => {
 	const $ = cheerio.load(html);
 	const el = $(SELECTORS.PAGE_COUNT);
-	return Number.isNaN(Number.parseInt(el.text()))
-		? 1
-		: Number.parseInt(el.text());
+	return Number.isNaN(Number.parseInt(el.text())) ? 1 : Number.parseInt(el.text());
 };
 
-export const extractQuestion = ({
-	html,
-	url,
-}: ScrapedPage<QnaIdUrl>): Question => {
+export const extractQuestion = ({ html, url }: ScrapedPage<QnaIdUrl>): Question => {
 	const $ = cheerio.load(html);
 
 	const { id, program, season } = parseQnaUrlWithId(url);

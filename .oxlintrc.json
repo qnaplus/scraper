@@ -1,8 +1,5 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "ignorePatterns": [
-    "src/oc/build/**",
-  ],
   "plugins": [
     "typescript",
     "unicorn",
@@ -12,9 +9,7 @@
   "categories": {
     "correctness": "error"
   },
-  "rules": {
-    "import/no-relative-parent-imports": "error"
-  },
+  "rules": {},
   "env": {
     "builtin": true
   }
