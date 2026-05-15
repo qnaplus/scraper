@@ -1,6 +1,6 @@
 # scraper
 
-A set of utilities focused on scraping the [VEX Robotics Q&A](https://www.robotevents.com/V5RC/2024-2025/QA/).
+A set of utilities focused on scraping the [VEX Robotics Q&A](https://events.vex.com/V5RC/2024-2025/QA/).
 
 ## Usage
 

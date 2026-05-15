@@ -2,7 +2,7 @@ import type { ScrapedPage } from "../../src/modules/extractors";
 import type { QnaHomeUrl } from "../../src/modules/parsing";
 
 export default {
-	url: "https://www.robotevents.com/V5RC/2023-2024/QA",
+	url: "https://events.vex.com/V5RC/2023-2024/QA",
 	html: `<!DOCTYPE html>
 <html lang="en">
 <head class="h-100">
@@ -29,7 +29,7 @@ export default {
             }
         };
         </script>
-    <link rel="preload" as="style" href="https://www.robotevents.com/build/assets/dataTables-DCgFvvHb.css" /><link rel="preload" as="style" href="https://www.robotevents.com/build/assets/FrontMultiSelect-qABy6wrX.css" /><link rel="preload" as="style" href="https://www.robotevents.com/build/assets/app-zhPFw-xP.css" /><link rel="preload" as="style" href="https://www.robotevents.com/build/assets/app-Dm3lQqDD.css" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/app-OfXC_LTW.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/_commonjsHelpers-BosuxZz1.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/dataTables.buttons-D28Gp9Xo.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/fetch-BDERxYx_.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/moment-zH0z38ay.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/index-DW_MHI2K.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/jquery-DzX1cMbg.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/bootstrap.esm-auRvAJ_r.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/typeof-ZI2KZN5z.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/_plugin-vue_export-helper-Dz4ggxAd.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/instance-DOL8Kr4k.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/_commonjs-dynamic-modules-TDtrdbi3.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/FrontMultiSelect-C-Z1hPU-.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/index-P2h9gwcW.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/sdk-B4J6oF9I.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/popper-Bt1yUB8z.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/optionsMixin-D_hDTg9H.js" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/dataTables-DCgFvvHb.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/FrontMultiSelect-qABy6wrX.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/app-zhPFw-xP.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/app-Dm3lQqDD.css" data-navigate-track="reload" /><script type="module" src="https://www.robotevents.com/build/assets/app-OfXC_LTW.js" data-navigate-track="reload"></script>    <script>
+    <link rel="preload" as="style" href="https://events.vex.com/build/assets/dataTables-DCgFvvHb.css" /><link rel="preload" as="style" href="https://events.vex.com/build/assets/FrontMultiSelect-qABy6wrX.css" /><link rel="preload" as="style" href="https://events.vex.com/build/assets/app-zhPFw-xP.css" /><link rel="preload" as="style" href="https://events.vex.com/build/assets/app-Dm3lQqDD.css" /><link rel="modulepreload" href="https://events.vex.com/build/assets/app-OfXC_LTW.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/_commonjsHelpers-BosuxZz1.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/dataTables.buttons-D28Gp9Xo.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/fetch-BDERxYx_.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/moment-zH0z38ay.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/index-DW_MHI2K.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/jquery-DzX1cMbg.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/bootstrap.esm-auRvAJ_r.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/typeof-ZI2KZN5z.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/_plugin-vue_export-helper-Dz4ggxAd.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/instance-DOL8Kr4k.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/_commonjs-dynamic-modules-TDtrdbi3.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/FrontMultiSelect-C-Z1hPU-.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/index-P2h9gwcW.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/sdk-B4J6oF9I.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/popper-Bt1yUB8z.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/optionsMixin-D_hDTg9H.js" /><link rel="stylesheet" href="https://events.vex.com/build/assets/dataTables-DCgFvvHb.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://events.vex.com/build/assets/FrontMultiSelect-qABy6wrX.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://events.vex.com/build/assets/app-zhPFw-xP.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://events.vex.com/build/assets/app-Dm3lQqDD.css" data-navigate-track="reload" /><script type="module" src="https://events.vex.com/build/assets/app-OfXC_LTW.js" data-navigate-track="reload"></script>    <script>
         var global = window;
     </script>
 
@@ -40,7 +40,7 @@ export default {
         body:before {background:url("/images/bg/bg2.svg") repeat;display:block;content:"";position:absolute;z-index:-1;top:165px;left:0;right:0;height:80%;opacity:0.75}
     </style>
         
-    <link rel="preload" as="style" href="https://www.robotevents.com/build/assets/index-Boo2WfFi.css" /><link rel="preload" as="style" href="https://www.robotevents.com/build/assets/votes-tn0RQdqM.css" /><link rel="preload" as="style" href="https://www.robotevents.com/build/assets/FrontMultiSelect-qABy6wrX.css" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/faqs-T_IW7qGj.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/_plugin-vue_export-helper-Dz4ggxAd.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/index-BlWSNe5X.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/votes-CbexMZCi.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/FrontMultiSelect-C-Z1hPU-.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/popper-Bt1yUB8z.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/_commonjsHelpers-BosuxZz1.js" /><link rel="modulepreload" href="https://www.robotevents.com/build/assets/optionsMixin-D_hDTg9H.js" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/index-Boo2WfFi.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/votes-tn0RQdqM.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://www.robotevents.com/build/assets/FrontMultiSelect-qABy6wrX.css" data-navigate-track="reload" /><script type="module" src="https://www.robotevents.com/build/assets/faqs-T_IW7qGj.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="https://events.vex.com/build/assets/index-Boo2WfFi.css" /><link rel="preload" as="style" href="https://events.vex.com/build/assets/votes-tn0RQdqM.css" /><link rel="preload" as="style" href="https://events.vex.com/build/assets/FrontMultiSelect-qABy6wrX.css" /><link rel="modulepreload" href="https://events.vex.com/build/assets/faqs-T_IW7qGj.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/_plugin-vue_export-helper-Dz4ggxAd.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/index-BlWSNe5X.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/votes-CbexMZCi.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/FrontMultiSelect-C-Z1hPU-.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/popper-Bt1yUB8z.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/_commonjsHelpers-BosuxZz1.js" /><link rel="modulepreload" href="https://events.vex.com/build/assets/optionsMixin-D_hDTg9H.js" /><link rel="stylesheet" href="https://events.vex.com/build/assets/index-Boo2WfFi.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://events.vex.com/build/assets/votes-tn0RQdqM.css" data-navigate-track="reload" /><link rel="stylesheet" href="https://events.vex.com/build/assets/FrontMultiSelect-qABy6wrX.css" data-navigate-track="reload" /><script type="module" src="https://events.vex.com/build/assets/faqs-T_IW7qGj.js" data-navigate-track="reload"></script>
     <style>
         blockquote {
             background-color: #dddddd;
@@ -57,8 +57,8 @@ export default {
         <div class="container header d-none d-lg-block mb-2">
     <div class="d-flex justify-content-between align-items-center">
         <div class="flex-grow-1">
-            <a href="https://www.robotevents.com">
-                                                            <img src="https://www.robotevents.com/images/robotevents-logo-cropped.png" class="navbar-brand-image" alt="RobotEvents.com">
+            <a href="https://events.vex.com">
+                                                            <img src="https://events.vex.com/images/robotevents-logo-cropped.png" class="navbar-brand-image" alt="events.vex.com">
                                                 </a>
         </div>
 
@@ -74,7 +74,7 @@ export default {
 
         <div class="flex-grow-1 mt-2">
             <a href="https://recf.org">
-                 <img src="https://www.robotevents.com/images/rec-foundation.png?20221006" class="navbar-brand-image recf-logo pull-right" alt="Robotics Education & Competition Foundation">
+                 <img src="https://events.vex.com/images/rec-foundation.png?20221006" class="navbar-brand-image recf-logo pull-right" alt="Robotics Education & Competition Foundation">
             </a>
         </div>
     </div>
@@ -83,8 +83,8 @@ export default {
     <div class="container">
         <div class="navbar-header d-lg-none d-flex justify-content-between flex-grow-1">
             <div class="flex-grow-1 navbar-brand-container">
-            <a href="https://www.robotevents.com" class="navbar-brand-custom flex-grow-1">
-                <img src="https://www.robotevents.com/images/robotevents-logo-cropped.png" class="img-fluid navbar-brand-image" alt="RobotEvents.com">
+            <a href="https://events.vex.com" class="navbar-brand-custom flex-grow-1">
+                <img src="https://events.vex.com/images/robotevents-logo-cropped.png" class="img-fluid navbar-brand-image" alt="events.vex.com">
             </a>
             </div>
             <button
@@ -102,7 +102,7 @@ export default {
         <div class="collapse navbar-collapse justify-content-lg-between" id="navbar-collapse-1" style="padding: 0">
             <ul class="navbar-nav">
             <li  class="nav-item">
-    <a  href="https://www.robotevents.com" class="nav-link">
+    <a  href="https://events.vex.com" class="nav-link">
                     <i class="circle-o"></i>
         
         
@@ -132,27 +132,27 @@ export default {
                             <strong>VEX</strong>
                         </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/vex-iq-competition" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/vex-iq-competition" class="dropdown-item">
         VEX IQ Robotics Competition
     </a>
 </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/vex-robotics-competition" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/vex-robotics-competition" class="dropdown-item">
         VEX V5 Robotics Competition
     </a>
 </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/college-competition" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/college-competition" class="dropdown-item">
         VEX U Robotics Competition
     </a>
 </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/vex-ai-competition" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/vex-ai-competition" class="dropdown-item">
         VEX AI Robotics Competition
     </a>
 </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/vex-factory-automation-competition" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/vex-factory-automation-competition" class="dropdown-item">
         VEX  Factory Automation Competition
     </a>
 </li>
@@ -162,7 +162,7 @@ export default {
                             <strong>Drones</strong>
                         </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/adc" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/adc" class="dropdown-item">
         Aerial Drone Competition
     </a>
 </li>
@@ -172,12 +172,12 @@ export default {
                             <strong>Other</strong>
                         </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/workshops" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/workshops" class="dropdown-item">
         Workshops &amp; Camps
     </a>
 </li>
                                                     <li>
-    <a href="https://www.robotevents.com/robot-competitions/national-robotics-league" class="dropdown-item">
+    <a href="https://events.vex.com/robot-competitions/national-robotics-league" class="dropdown-item">
         National Robotics League
     </a>
 </li>
@@ -201,12 +201,12 @@ export default {
     
             <ul class="dropdown-menu" aria-label="Resources">
                             <li>
-    <a href="https://www.robotevents.com/support" class="dropdown-item">
+    <a href="https://events.vex.com/support" class="dropdown-item">
         Support
     </a>
 </li>
                             <li>
-    <a href="https://www.robotevents.com/map" class="dropdown-item">
+    <a href="https://events.vex.com/map" class="dropdown-item">
         Map Search
     </a>
 </li>
@@ -216,7 +216,7 @@ export default {
     </a>
 </li>
                             <li>
-    <a href="https://www.robotevents.com/webcasts" class="dropdown-item">
+    <a href="https://events.vex.com/webcasts" class="dropdown-item">
         Webcasts
     </a>
 </li>
@@ -225,7 +225,7 @@ export default {
 
                     <li class="divider-vertical d-none d-lg-block"></li>
                     <li  class="nav-item">
-    <a  href="https://www.robotevents.com/grants" class="nav-link">
+    <a  href="https://events.vex.com/grants" class="nav-link">
                     <i class="circle-o"></i>
         
         
@@ -291,7 +291,7 @@ export default {
 
                     <li class="divider-vertical d-none d-lg-block"></li>
                     <li  class="nav-item">
-    <a  href="https://www.robotevents.com/auth/register" class="nav-link">
+    <a  href="https://events.vex.com/auth/register" class="nav-link">
                     <i class="circle-o"></i>
         
         
@@ -305,7 +305,7 @@ export default {
 
                     <li class="divider-vertical d-none d-lg-block"></li>
                     <li  class="nav-item">
-    <a  href="https://www.robotevents.com/auth/login" class="nav-link">
+    <a  href="https://events.vex.com/auth/login" class="nav-link">
                     <i class="circle-o"></i>
         
         
@@ -332,7 +332,7 @@ export default {
                     </h1>
 
         <div>
-                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/guidelines"
+                    <a href="https://events.vex.com/V5RC/2024-2025/QA/guidelines"
                class="btn btn-primary btn-sm">
                 Usage Guidelines
             </a>
@@ -343,9 +343,9 @@ export default {
     <div id="faq">
             
     <p>Welcome to the official VEX V5 Robotics Competition Question &amp; Answer system, where all registered teams have the opportunity to ask for official rules interpretations and clarifications. This Q&amp;A system is the only source for official V5RC High Stakes rules clarifications, and the clarifications made here from the Game Design Committee (GDC) are considered as official and binding as the written <a href="https://content.vexrobotics.com/docs/2024-2025/v5rc-high-stakes/VRC-HighStakes-2.2.pdf">Game Manual</a> itself.</p>
-<p><strong>Please review the <a href="https://robotevents.com/VRC/2024-2025/QA/guidelines">Q&amp;A Usage Guidelines</a> before posting</strong>.  This system is only intended for specific V5RC High Stakes rules questions.</p>
+<p><strong>Please review the <a href="https://events.vex.com/VRC/2024-2025/QA/guidelines">Q&amp;A Usage Guidelines</a> before posting</strong>.  This system is only intended for specific V5RC High Stakes rules questions.</p>
 <ul>
-<li>For event, registration, or other competition support questions, please contact your <a href="https://www.robotevents.com/support">REC Foundation Regional Support Manager</a>.</li>
+<li>For event, registration, or other competition support questions, please contact your <a href="https://events.vex.com/support">REC Foundation Regional Support Manager</a>.</li>
 <li>For VEX technical support, contact <a href="/cdn-cgi/l/email-protection#04777174746b76704472617c2a676b69"><span class="__cf_email__" data-cfemail="1e6d6b6e6e716c6a5e687b66307d7173">[email&#160;protected]</span></a> or <a href="/cdn-cgi/l/email-protection#6112000d0412211704194f020e0c"><span class="__cf_email__" data-cfemail="582b39343d2b182e3d20763b3735">[email&#160;protected]</span></a>.</li>
 <li>For game questions, suggestions, or concerns outside of specific and official rules questions, contact <a href="/cdn-cgi/l/email-protection#60272423201605184e030f0d"><span class="__cf_email__" data-cfemail="0f484b4c4f796a77216c6062">[email&#160;protected]</span></a>.</li>
 </ul>
@@ -354,7 +354,7 @@ export default {
 
     <div class="row">
         <div class="col-sm-4">
-            <form method="GET" action="https://www.robotevents.com/V5RC/2024-2025/QA" accept-charset="UTF-8">
+            <form method="GET" action="https://events.vex.com/V5RC/2024-2025/QA" accept-charset="UTF-8">
             <div class="input-group">
                 <input type="text"
                        class="form-control"
@@ -382,18 +382,18 @@ export default {
 
                 <ul class="dropdown-menu">
                                         <li class="dropdown-item">
-                        <a href="https://www.robotevents.com/faqs/41/pdf">
+                        <a href="https://events.vex.com/faqs/41/pdf">
                             All Questions
                         </a>
                     </li>
                     <li class="dropdown-item">
-                        <a href="https://www.robotevents.com/faqs/41/pdf?important=1">
+                        <a href="https://events.vex.com/faqs/41/pdf?important=1">
                             Starred Questions
                         </a>
                     </li>
                 </ul>
             </div>
-                            <a href="https://www.robotevents.com/V5RC/2024-2025/QA/ask"
+                            <a href="https://events.vex.com/V5RC/2024-2025/QA/ask"
                    class="btn btn-default">
                     <i class="fa fa-fw fa-edit"></i>
                     Ask a Question
@@ -402,7 +402,7 @@ export default {
     </div>
 
             <hr>
-                            <a href="https://www.robotevents.com/V5RC/2024-2025/QA?filter=new_question"
+                            <a href="https://events.vex.com/V5RC/2024-2025/QA?filter=new_question"
                    class="btn btn-danger" style="margin-bottom: 1em">
                 <i class="fa fa-filter"></i>
 
@@ -410,7 +410,7 @@ export default {
 
                 <span class="badge badge-secondary">182</span>
             </a>
-                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA?filter=new_answer"
+                    <a href="https://events.vex.com/V5RC/2024-2025/QA?filter=new_answer"
                    class="btn btn-danger" style="margin-bottom: 1em">
                 <i class="fa fa-filter"></i>
 
@@ -425,7 +425,7 @@ export default {
     
                         <div class="card-body">
                 <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2575">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2575">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2575: SG6 Clarification for Double Possession
                     </a>
@@ -449,7 +449,7 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG6"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG6"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG6
@@ -457,7 +457,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2574">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2574">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2574: [SG11] [Q&amp;A 2420] Teams Removing Own Placed Goal
                     </a>
@@ -481,7 +481,7 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG11"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG11"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG11
@@ -489,7 +489,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2566">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2566">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2566: R4 &amp; SG2 Robot Status during size measurement for inspection
                     </a>
@@ -513,12 +513,12 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/R4"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/R4"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         R4
                     </a>&nbsp;
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG2"
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG2"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG2
@@ -526,7 +526,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2565">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2565">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2565: Forcing a DQ through SG6, G15, and diagonal corner guarding
                     </a>
@@ -550,12 +550,12 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/G15"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/G15"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         G15
                     </a>&nbsp;
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG6"
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG6"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG6
@@ -563,7 +563,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2564">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2564">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2564: Trapping using a mobile goal
                     </a>
@@ -587,7 +587,7 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG6"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG6"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG6
@@ -595,7 +595,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2558">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2558">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2558: G9 Note clarification in regards to Q&amp;A 2541
                     </a>
@@ -619,7 +619,7 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/G9"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/G9"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         G9
@@ -627,7 +627,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2552">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2552">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2552: License plates that are 3D Printed
                     </a>
@@ -651,7 +651,7 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/R8"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/R8"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         R8
@@ -659,7 +659,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2548">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2548">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2548: Interacting with another robot&#039;s mobile goal (Q&amp;A 2026 clarification)
                     </a>
@@ -683,12 +683,12 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/G16"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/G16"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         G16
                     </a>&nbsp;
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG6"
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG6"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG6
@@ -696,7 +696,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2547">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2547">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2547: G16 Clarification with negative corner
                     </a>
@@ -720,7 +720,7 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/G16"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/G16"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         G16
@@ -728,7 +728,7 @@ export default {
                             </div>
                                                 <hr>
                         <h4 class="title">
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/2544">
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/2544">
                                                     <span class="is_answered"><i class="fa fa-check-circle"></i></span>
                                                 2544: SG7 &amp; SC8: Forcing Loss of AWP
                     </a>
@@ -752,12 +752,12 @@ export default {
             <div class="tags clearfix">
                                                                             <span class="badge bg-danger me-2">New Question</span>
                                                                 <span class="badge bg-success me-2">New Answer</span>
-                                                                        <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SC8"
+                                                                        <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SC8"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SC8
                     </a>&nbsp;
-                                    <a href="https://www.robotevents.com/V5RC/2024-2025/QA/tag/SG7"
+                                    <a href="https://events.vex.com/V5RC/2024-2025/QA/tag/SG7"
                        class="badge bg-secondary">
                         <i class="fa fa-fw fa-tag"></i>
                         SG7
@@ -778,15 +778,15 @@ export default {
                 
                                                                                         <li class="page-item active" aria-current="page"><span class="page-link">1</span>
                             </li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=2">2</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=3">3</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=4">4</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=5">5</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=6">6</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=7">7</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=8">8</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=9">9</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=10">10</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=2">2</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=3">3</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=4">4</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=5">5</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=6">6</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=7">7</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=8">8</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=9">9</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=10">10</a></li>
                                                                                         
                                     <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span>
                     </li>
@@ -795,12 +795,12 @@ export default {
                                             
                 
                 
-                                                                                        <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=16">16</a></li>
-                                                                                                <li class="page-item"><a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=17">17</a></li>
+                                                                                        <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=16">16</a></li>
+                                                                                                <li class="page-item"><a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=17">17</a></li>
                                                                         
             
                             <li class="page-item">
-                    <a class="page-link" href="https://www.robotevents.com/V5RC/2024-2025/QA?page=2" rel="next"
+                    <a class="page-link" href="https://events.vex.com/V5RC/2024-2025/QA?page=2" rel="next"
                        aria-label="Next &raquo;">&rsaquo;</a>
                 </li>
                     </ul>
@@ -830,14 +830,14 @@ export default {
             <div class="col">
                 <small>&copy; 2025 Robotics Education &amp; Competition Foundation.</small><br>
                 <small>All rights reserved. All other names/trademarks are the property of their respective owners.</small><br>
-                <small><a href="https://www.robotevents.com/privacy-policy"><span style="color: #ffffff">Privacy Policy</span></a></small>
+                <small><a href="https://events.vex.com/privacy-policy"><span style="color: #ffffff">Privacy Policy</span></a></small>
                 <span style="color: #cccccc">|</span>
-                <small><a href="https://www.robotevents.com/terms-of-service"><span style="color: #ffffff">Terms of Service</span></a></small>
+                <small><a href="https://events.vex.com/terms-of-service"><span style="color: #ffffff">Terms of Service</span></a></small>
                 <span style="color: #cccccc">|</span>
-                <small><a href="https://www.robotevents.com/acceptable-use"><span style="color: #ffffff">Acceptable Use Policy</span></a></small>
+                <small><a href="https://events.vex.com/acceptable-use"><span style="color: #ffffff">Acceptable Use Policy</span></a></small>
                 <span style="color: #cccccc">|</span>
-                <small><a href="https://www.robotevents.com/refund-policy"><span style="color: #ffffff">Refund Policy</span></a></small><br>
-                <small><a href="https://www.robotevents.com/nonprofit-disclosures"><span style="color: #ffffff">State Nonprofit Disclosures</span></a></small><br>
+                <small><a href="https://events.vex.com/refund-policy"><span style="color: #ffffff">Refund Policy</span></a></small><br>
+                <small><a href="https://events.vex.com/nonprofit-disclosures"><span style="color: #ffffff">State Nonprofit Disclosures</span></a></small><br>
             </div>
         </div>
     </div>
@@ -845,7 +845,7 @@ export default {
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         window.ApiUrl = {
-            api: "https://www.robotevents.com"
+            api: "https://events.vex.com"
         };
     </script>
                 <!-- Google tag (gtag.js) - Google Analytics -->

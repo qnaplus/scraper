@@ -16,9 +16,9 @@ const TEST_PROGRAM = "V5RC";
 const TEST_QUESTION_ID = "1591";
 const TEST_PAGE_NUM = 1;
 
-const VALID_HOME_URL: QnaHomeUrl = `https://www.robotevents.com/${TEST_PROGRAM}/${TEST_SEASON}/QA`;
-const VALID_QUESTION_URL: QnaIdUrl = `https://www.robotevents.com/${TEST_PROGRAM}/${TEST_SEASON}/QA/${TEST_QUESTION_ID}`;
-const VALID_PAGINATED_URL: QnaPageUrl = `https://www.robotevents.com/${TEST_PROGRAM}/${TEST_SEASON}/QA?page=${TEST_PAGE_NUM}`;
+const VALID_HOME_URL: QnaHomeUrl = `https://events.vex.com/${TEST_PROGRAM}/${TEST_SEASON}/QA`;
+const VALID_QUESTION_URL: QnaIdUrl = `https://events.vex.com/${TEST_PROGRAM}/${TEST_SEASON}/QA/${TEST_QUESTION_ID}`;
+const VALID_PAGINATED_URL: QnaPageUrl = `https://events.vex.com/${TEST_PROGRAM}/${TEST_SEASON}/QA?page=${TEST_PAGE_NUM}`;
 const INVALID_URL = "INVALID_URL";
 
 describe("validateQnaUrl", () => {

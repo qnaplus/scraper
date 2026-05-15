@@ -1,12 +1,12 @@
 {
 	"name": "@qnaplus/scraper",
-	"version": "3.1.1",
+	"version": "3.1.2",
 	"description": "Utility package to scrape questions from the VEX Robotics Q&A.",
 	"main": "dist/index.js",
 	"repository": {
 		"url": "git+ssh://git@github.com/qnaplus/scraper.git"
 	},
-	"author": "Battlesquid <25509915+Battlesquid@users.noreply.github.com>",
+	"author": "battlesquid <25509915+battlesquid@users.noreply.github.com>",
 	"license": "GPL-3.0",
 	"scripts": {
 		"build": "tsc",
