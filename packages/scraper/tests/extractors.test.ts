@@ -35,16 +35,16 @@ describe("extractPageQuestions", () => {
 	it("shall extract questions from a Q&A page", () => {
 		const data = extractPageQuestions(vurc_home_page);
 		expect(data).toEqual([
-			"https://www.robotevents.com/VURC/2023-2024/QA/1969",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1946",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1945",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1942",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1932",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1927",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1925",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1924",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1923",
-			"https://www.robotevents.com/VURC/2023-2024/QA/1922",
+			"https://events.vex.com/VURC/2023-2024/QA/1969",
+			"https://events.vex.com/VURC/2023-2024/QA/1946",
+			"https://events.vex.com/VURC/2023-2024/QA/1945",
+			"https://events.vex.com/VURC/2023-2024/QA/1942",
+			"https://events.vex.com/VURC/2023-2024/QA/1932",
+			"https://events.vex.com/VURC/2023-2024/QA/1927",
+			"https://events.vex.com/VURC/2023-2024/QA/1925",
+			"https://events.vex.com/VURC/2023-2024/QA/1924",
+			"https://events.vex.com/VURC/2023-2024/QA/1923",
+			"https://events.vex.com/VURC/2023-2024/QA/1922",
 		]);
 	});
 });

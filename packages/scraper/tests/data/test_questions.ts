@@ -6,7 +6,7 @@ export const TEST_SEASON = "2024-2025";
 
 export const OLDEST_TEST_QUESTION_UNIQUE_DATES: Question = {
 	id: "2059",
-	url: "https://www.robotevents.com/V5RC/2024-2025/QA/2059",
+	url: "https://events.vex.com/V5RC/2024-2025/QA/2059",
 	program: "V5RC",
 	season: "2024-2025",
 	author: "",
@@ -26,7 +26,7 @@ export const OLDEST_TEST_QUESTION_UNIQUE_DATES: Question = {
 export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	{
 		id: "2057",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2057",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2057",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -44,7 +44,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	},
 	{
 		id: "2058",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2058",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2058",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -62,7 +62,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	},
 	{
 		id: "2059",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2059",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2059",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -80,7 +80,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	},
 	{
 		id: "2060",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2060",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2060",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -98,7 +98,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	},
 	{
 		id: "2061",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2061",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2061",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -116,7 +116,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	},
 	{
 		id: "2062",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2062",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2062",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -134,7 +134,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 	},
 	{
 		id: "2063",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2063",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2063",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -154,7 +154,7 @@ export const TEST_QUESTIONS_UNIQUE_DATES: Question[] = [
 
 export const OLDEST_TEST_QUESTIONS_OVERLAPPING_DATES: Question = {
 	id: "2058",
-	url: "https://www.robotevents.com/V5RC/2024-2025/QA/2058",
+	url: "https://events.vex.com/V5RC/2024-2025/QA/2058",
 	program: "V5RC",
 	season: "2024-2025",
 	author: "",
@@ -174,7 +174,7 @@ export const OLDEST_TEST_QUESTIONS_OVERLAPPING_DATES: Question = {
 export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	{
 		id: "2057",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2057",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2057",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -192,7 +192,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2060",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2060",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2060",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -210,7 +210,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2061",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2061",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2061",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -228,7 +228,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2059",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2059",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2059",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -246,7 +246,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2058",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2058",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2058",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -264,7 +264,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2062",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2062",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2062",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -282,7 +282,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2063",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2063",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2063",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -302,7 +302,7 @@ export const TEST_QUESTIONS_OVERLAPPING_DATES: Question[] = [
 
 export const OLDEST_TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question = {
 	id: "2061",
-	url: "https://www.robotevents.com/V5RC/2024-2025/QA/2061",
+	url: "https://events.vex.com/V5RC/2024-2025/QA/2061",
 	program: "V5RC",
 	season: "2024-2025",
 	author: "",
@@ -322,7 +322,7 @@ export const OLDEST_TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question = {
 export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	{
 		id: "2059",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2059",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2059",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -340,7 +340,7 @@ export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2058",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2058",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2058",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -358,7 +358,7 @@ export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2063",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2063",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2063",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -376,7 +376,7 @@ export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2060",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2060",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2060",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -394,7 +394,7 @@ export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2062",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2062",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2062",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -412,7 +412,7 @@ export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2057",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2057",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2057",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
@@ -430,7 +430,7 @@ export const TEST_QUESTIONS_MIXED_OVERLAPPING_DATES: Question[] = [
 	},
 	{
 		id: "2061",
-		url: "https://www.robotevents.com/V5RC/2024-2025/QA/2061",
+		url: "https://events.vex.com/V5RC/2024-2025/QA/2061",
 		program: "V5RC",
 		season: "2024-2025",
 		author: "",
