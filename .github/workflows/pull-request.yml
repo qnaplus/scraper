@@ -10,7 +10,7 @@ jobs:
     neat:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v
+            - uses: actions/checkout@v6
             - run: echo "PACKAGE_JSON=$(jq -c . < package.json)" >> $GITHUB_ENV
             - uses: pnpm/action-setup@v6
               with:
