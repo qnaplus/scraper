@@ -10,13 +10,28 @@ jobs:
     neat:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v3
-            - uses: pnpm/action-setup@v4
+            - uses: actions/checkout@v
+            - run: echo "PACKAGE_JSON=$(jq -c . < package.json)" >> $GITHUB_ENV
+            - uses: pnpm/action-setup@v6
               with:
-                  version: 10.7.0
-            - uses: actions/setup-node@v3
+                  cache: true
+            - uses: actions/setup-node@v6
               with:
-                  node-version: 22.14.0
+                  node-version: ${{ fromJson(env.PACKAGE_JSON).volta.node }}
+                  registry-url: https://registry.npmjs.org/
+                  cache: pnpm
             - run: pnpm i --frozen-lockfile
+            - name: Check version bumps
+              run: |
+                  for pkg in packages/scraper packages/scraper-strategies; do
+                    name=$(jq -r .name "$pkg/package.json")
+                    version=$(jq -r .version "$pkg/package.json")
+                    if pnpm view "$name@$version" version &>/dev/null; then
+                      echo "::error::$name@$version already exists on npm. Please bump the version."
+                      exit 1
+                    else
+                      echo "$name@$version is not yet published."
+                    fi
+                  done
             - run: pnpm neat
             - run: pnpm test
