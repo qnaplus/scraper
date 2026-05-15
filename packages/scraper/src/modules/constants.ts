@@ -14,9 +14,7 @@ export const Constants: IConstants = {
 	get DEFAULT_SEASONS() {
 		return Array(this.CURRENT_YEAR - this.START_YEAR + 1)
 			.fill(0)
-			.map<Season>(
-				(_, i) => `${this.START_YEAR + i}-${this.START_YEAR + i + 1}`,
-			);
+			.map<Season>((_, i) => `${this.START_YEAR + i}-${this.START_YEAR + i + 1}`);
 	},
 	get QUESTION_PROPERTIES() {
 		return [

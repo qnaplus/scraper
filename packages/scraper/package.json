@@ -1,6 +1,6 @@
 {
 	"name": "@qnaplus/scraper",
-	"version": "3.1.2",
+	"version": "3.1.3",
 	"description": "Utility package to scrape questions from the VEX Robotics Q&A.",
 	"main": "dist/index.js",
 	"repository": {
@@ -12,25 +12,31 @@
 		"build": "tsc",
 		"build:clean": "pnpm clean && pnpm build",
 		"test": "vitest --run",
-		"clean": "rimraf dist tsconfig.tsbuildinfo",
-		"reset": "pnpm clean && rimraf node_modules"
+		"clean": "rm -rf dist tsconfig.tsbuildinfo",
+		"reset": "pnpm clean && rm -rf node_modules",
+		"lint": "oxlint src",
+		"lint:fix": "oxlint --fix src",
+		"fmt": "oxfmt --check src",
+		"fmt:fix": "oxfmt src"
 	},
 	"dependencies": {
-		"@crawlee/core": "^3.11.5",
-		"cheerio": "^1.0.0",
-		"got-scraping": "^4.0.6",
+		"@crawlee/core": "^3.16.0",
+		"cheerio": "^1.2.0",
+		"got-scraping": "^4.2.1",
 		"node-pdf-parser": "^1.0.7",
 		"pino": "catalog:"
 	},
 	"devDependencies": {
-		"@qnaplus/typescript-config": "workspace:1.0.0",
+		"@qnaplus/typescript-config": "workspace:*",
 		"pino-pretty": "catalog:",
-		"vitest": "^3.1.2"
+		"vitest": "^4.1.6"
 	},
 	"volta": {
 		"extends": "../../package.json"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"exports": {
 		".": {
 			"default": "./dist/index.js",

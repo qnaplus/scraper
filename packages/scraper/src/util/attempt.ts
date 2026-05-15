@@ -18,9 +18,7 @@ export interface AttemptFailure {
 
 export type AttemptResult<T> = AttemptSuccess<T> | AttemptFailure;
 
-export const attempt = async <T>(
-	options: AttemptOptions<T>,
-): Promise<AttemptResult<T>> => {
+export const attempt = async <T>(options: AttemptOptions<T>): Promise<AttemptResult<T>> => {
 	let result: T | undefined = undefined;
 
 	for (let i = 0; i < options.attempts; i++) {

@@ -2,8 +2,7 @@ import { parsepdf } from "node-pdf-parser";
 import { getDefaultFetcherOptions } from "../clients";
 import type { FetcherOptions } from "./fetchers";
 
-export const RULE_TABLE_PATTERN =
-	/(?<name><[A-Z]+\d+>) (?<summary>[A-Z](?:.+\.?))+?/g;
+export const RULE_TABLE_PATTERN = /(?<name><[A-Z]+\d+>) (?<summary>[A-Z](?:.+\.?))+?/g;
 
 export interface Rule {
 	name: string;
@@ -27,15 +26,11 @@ export const extractRules = async (
 	for (const match of matches) {
 		const name = match.groups?.name;
 		const summary = match.groups?.summary;
-		if (
-			name === undefined ||
-			summary === undefined ||
-			rules.find((r) => r.name === name)
-		) {
+		if (name === undefined || summary === undefined || rules.find((r) => r.name === name)) {
 			logger?.trace(`Already added rule ${name}, skipping.`);
 			continue;
 		}
-		logger?.debug("Adding new rule: ", name);
+		logger?.debug({ name, summary }, `Adding new rule: ${name}`);
 		rules.push({ name, summary });
 	}
 	if (teardown) {

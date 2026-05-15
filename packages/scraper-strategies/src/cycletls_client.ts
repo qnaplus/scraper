@@ -17,15 +17,17 @@ export class CycleTLSScrapingClient extends FetchClient<CycleTLSResponse> {
 
 	async fetch(url: string): Promise<CycleTLSResponse> {
 		const response = await this.getResponse(url);
+		const body = await response.text();
+		const ok = response.status === 200;
 		return {
-			body: response.body as string,
-			ok: response.status === 200,
+			body,
+			ok,
 			url: response.finalUrl,
 			status: response.status,
 		};
 	}
 
-	async buffer(): Promise<ArrayBufferLike | null> {
+	async buffer(): Promise<ArrayBuffer | null> {
 		// TODO: implement reading response buffer
 		return null;
 	}

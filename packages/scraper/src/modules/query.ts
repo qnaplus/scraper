@@ -14,9 +14,7 @@ import { type QnaFilters, getScrapingUrls } from "./generators";
  * @param logger Optional {@link Logger}
  * @returns All questions that have not been answered.
  */
-export const getUnansweredQuestions = async (
-	options?: FetcherOptions,
-): Promise<Question[]> => {
+export const getUnansweredQuestions = async (options?: FetcherOptions): Promise<Question[]> => {
 	const questions = await getQuestions(undefined, options);
 	return questions.filter((q) => !q.answered);
 };
@@ -65,10 +63,7 @@ export const getOldestUnansweredQuestion = (
 			(Number.parseInt(q1.id) - Number.parseInt(q2.id)),
 	);
 	return data.find(
-		(q) =>
-			q.answered === false &&
-			q.season === season &&
-			!q.title.startsWith("[archived]"),
+		(q) => q.answered === false && q.season === season && !q.title.startsWith("[archived]"),
 	);
 };
 
@@ -78,10 +73,7 @@ export const getOldestUnansweredQuestion = (
  * @param season The season in which to search in
  * @returns The oldest question asked for the given season, if any
  */
-export const getOldestQuestion = (
-	questions: Question[],
-	season: Season,
-): Question | undefined => {
+export const getOldestQuestion = (questions: Question[], season: Season): Question | undefined => {
 	const data = [...questions];
 	data.sort(
 		(q1, q2) =>
@@ -89,7 +81,5 @@ export const getOldestQuestion = (
 			q2.askedTimestampMs +
 			(Number.parseInt(q1.id) - Number.parseInt(q2.id)),
 	);
-	return data.find(
-		(q) => q.season === season && !q.title.startsWith("[archived]"),
-	);
+	return data.find((q) => q.season === season && !q.title.startsWith("[archived]"));
 };

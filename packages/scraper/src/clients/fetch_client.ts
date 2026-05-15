@@ -46,7 +46,7 @@ export abstract class FetchClient<FetchResponse extends FetchClientResponse> {
 	constructor(protected logger?: Logger) {}
 
 	abstract fetch(url: string): Promise<FetchResponse>;
-	abstract buffer(url: string): Promise<ArrayBufferLike | null>;
+	abstract buffer(url: string): Promise<ArrayBuffer | null>;
 	abstract teardown(): Promise<void> | void;
 
 	/**

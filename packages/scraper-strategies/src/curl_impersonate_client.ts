@@ -8,7 +8,7 @@ import {
 	type RequestPreset,
 	type SafariPresetVersion,
 	getCompatibleBrowsers,
-} from "@qnaplus/node-curl-impersonate";
+} from "ts-curl-impersonate";
 import { FetchClient, type FetchClientResponse } from "@qnaplus/scraper";
 
 export class CurlImpersonateScrapingClient extends FetchClient<FetchClientResponse> {
@@ -18,10 +18,7 @@ export class CurlImpersonateScrapingClient extends FetchClient<FetchClientRespon
 			if (ok !== undefined) {
 				return;
 			}
-			const response = await new RequestBuilder()
-				.url(url)
-				.preset(preset)
-				.send();
+			const response = await new RequestBuilder().url(url).preset(preset).send();
 			if (response.stderr !== undefined) {
 				throw new Error(response.stderr); // TODO figure out how to handle this
 			}
@@ -64,23 +61,19 @@ export class CurlImpersonateScrapingClient extends FetchClient<FetchClientRespon
 		// TODO: when a bad status code is not recieved, cache the preset that was used.
 		// Continue using that preset until failure, then search again for another working preset.
 		if (badStatusCodes.includes(latestResponse.status)) {
-			this.logger?.trace(
-				`All presets failed (latest response: ${latestResponse}`,
-			);
+			this.logger?.trace(`All presets failed (latest response: ${latestResponse}`);
 		}
 		return latestResponse;
 	}
 
-	async buffer(): Promise<ArrayBufferLike | null> {
+	async buffer(): Promise<ArrayBuffer | null> {
 		// TODO: implement reading response buffer
 		return null;
 	}
 
 	teardown(): Promise<void> | void {}
 
-	private async forEachPreset(
-		cb: (preset: RequestPreset<BrowserType>) => void | Promise<void>,
-	) {
+	private async forEachPreset(cb: (preset: RequestPreset<BrowserType>) => void | Promise<void>) {
 		const browsers = getCompatibleBrowsers();
 		for (const browser of browsers) {
 			for (const version of Object.keys(BrowserPresets[browser.name])) {
@@ -99,11 +92,7 @@ export class CurlImpersonateScrapingClient extends FetchClient<FetchClientRespon
 		url: string,
 		preset: RequestPreset<T>,
 	): Promise<CurlResultOk> {
-		const response = await new RequestBuilder()
-			.url(url)
-			.preset(preset)
-			.follow()
-			.send();
+		const response = await new RequestBuilder().url(url).preset(preset).follow().send();
 		if (response.stderr !== undefined) {
 			throw new Error(response.stderr); // TODO figure out how to handle this
 		}
