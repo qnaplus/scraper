@@ -1,7 +1,6 @@
 packages:
   - packages/*
 allowBuilds:
-  canvas: true
   esbuild: true
 catalog:
   pino: ^10.3.1

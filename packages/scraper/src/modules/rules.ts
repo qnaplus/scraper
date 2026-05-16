@@ -1,4 +1,3 @@
-import { parsepdf } from "node-pdf-parser";
 import { getDefaultFetcherOptions } from "../clients";
 import type { FetcherOptions } from "./fetchers";
 
@@ -7,6 +6,25 @@ export const RULE_TABLE_PATTERN = /(?<name><[A-Z]+\d+>) (?<summary>[A-Z](?:.+\.?
 export interface Rule {
 	name: string;
 	summary: string;
+}
+
+async function extractPdfText(buffer: ArrayBuffer): Promise<string> {
+	const { getDocument } = await import("pdfjs-dist/legacy/build/pdf.mjs");
+	const doc = await getDocument({ data: new Uint8Array(buffer) }).promise;
+	const pages: string[] = [];
+	for (let i = 1; i <= doc.numPages; i++) {
+		const page = await doc.getPage(i);
+		const content = await page.getTextContent();
+		let pageText = "";
+		for (const item of content.items) {
+			if ("str" in item) {
+				pageText += item.str;
+				if (item.hasEOL) pageText += "\n";
+			}
+		}
+		pages.push(pageText);
+	}
+	return pages.join("\n");
 }
 
 export const extractRules = async (
@@ -19,8 +37,7 @@ export const extractRules = async (
 	if (buffer === null) {
 		return null;
 	}
-	const content = await parsepdf(buffer);
-	const text = content.pages.join("\n");
+	const text = await extractPdfText(buffer);
 	const matches = Array.from(text.matchAll(RULE_TABLE_PATTERN));
 	const rules: Rule[] = [];
 	for (const match of matches) {
