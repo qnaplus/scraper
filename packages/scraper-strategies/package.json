@@ -23,7 +23,7 @@
 		"cycletls": "^2.0.5",
 		"header-generator": "^2.1.82",
 		"pino": "catalog:",
-		"ts-curl-impersonate": "^1.0.9"
+		"ts-curl-impersonate": "^1.0.10-rc.0"
 	},
 	"devDependencies": {
 		"@qnaplus/typescript-config": "workspace:*",

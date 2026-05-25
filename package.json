@@ -6,8 +6,8 @@
 	"author": "battlesqui_d",
 	"license": "GPL-3.0",
 	"devDependencies": {
-		"oxfmt": "^0.49.0",
-		"oxlint": "^1.64.0",
+		"oxfmt": "^0.51.0",
+		"oxlint": "^1.66.0",
 		"typescript": "6.0.3"
 	},
 	"scripts": {
@@ -22,9 +22,5 @@
 		"neat": "pnpm lint && pnpm fmt",
 		"neat:fix": "pnpm lint:fix && pnpm fmt:fix"
 	},
-	"volta": {
-		"pnpm": "11.1.2",
-		"node": "22.14.0"
-	},
-	"packageManager": "pnpm@11.1.2"
+	"packageManager": "pnpm@11.3.0"
 }
