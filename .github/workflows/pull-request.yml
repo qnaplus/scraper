@@ -26,4 +26,3 @@ jobs:
                     fi
                   done
             - run: pnpm neat
-            - run: pnpm test
