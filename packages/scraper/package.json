@@ -10,10 +10,10 @@
 	"license": "GPL-3.0",
 	"scripts": {
 		"build": "tsc",
-		"build:clean": "pnpm clean && pnpm build",
+		"build:clean": "pnpm clean:dist && pnpm build",
 		"test": "vitest --run",
-		"clean": "rm -rf dist tsconfig.tsbuildinfo",
-		"reset": "pnpm clean && rm -rf node_modules",
+		"clean:dist": "rm -rf dist tsconfig.tsbuildinfo",
+		"reset": "pnpm clean:dist && rm -rf node_modules",
 		"lint": "oxlint src",
 		"lint:fix": "oxlint --fix src",
 		"fmt": "oxfmt --check src",
