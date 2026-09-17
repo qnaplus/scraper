@@ -1,7 +1,20 @@
+export interface ScrapingSelectors {
+	URLS: string;
+	AUTHOR: string;
+	TITLE: string;
+	QUESTION: string;
+	ANSWER: string;
+	ASKED_TIMESTAMP: string;
+	ANSWERED_TIMESTAMP: string;
+	TAGS: string;
+	PAGE_COUNT: string;
+	READONLY: string;
+}
+
 export default {
 	URLS: "div.card-body h4.title > a",
 	AUTHOR: "div.author",
-	TITLE: "div.question > h4",
+	TITLE: "div.question > h2",
 	QUESTION: "div.content-body:nth-child(4)",
 	ANSWER: "div.answer.approved .content-body",
 	ASKED_TIMESTAMP: "div.details:nth-child(3) > div:nth-child(2)",
@@ -9,4 +22,4 @@ export default {
 	TAGS: "div.tags a",
 	PAGE_COUNT: "nav ul.pagination li:nth-last-child(2)",
 	READONLY: "div.alert-warning",
-};
+} satisfies ScrapingSelectors;

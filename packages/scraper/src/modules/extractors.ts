@@ -1,5 +1,5 @@
 import * as cheerio from "cheerio";
-import SELECTORS from "../selectors";
+import SELECTORS, { ScrapingSelectors } from "../selectors";
 import type { Question } from "../types";
 import { type QnaHomeUrl, type QnaIdUrl, type QnaPageUrl, parseQnaUrlWithId } from "./parsing";
 
@@ -27,20 +27,23 @@ function selectHtml(
 	selectorKey: keyof typeof SELECTORS,
 	required: true,
 	raw?: boolean,
+	selectorOverrides?: Partial<ScrapingSelectors>,
 ): string;
 function selectHtml(
 	$: cheerio.CheerioAPI,
 	selectorKey: keyof typeof SELECTORS,
 	required: false,
 	raw?: boolean,
+	selectorOverrides?: Partial<ScrapingSelectors>,
 ): string | null;
 function selectHtml(
 	$: cheerio.CheerioAPI,
 	selectorKey: keyof typeof SELECTORS,
 	required: boolean,
 	raw?: boolean,
+	selectorOverrides?: Partial<ScrapingSelectors>,
 ): string | null {
-	const selector = SELECTORS[selectorKey];
+	const selector = selectorOverrides?.[selectorKey] ?? SELECTORS[selectorKey];
 	const text = raw ? unleak(unformat($(selector).html())) : unleak(unformat($(selector).text()));
 	const isEmptyString = text.trim() === "";
 	if (required && isEmptyString) {
@@ -49,37 +52,46 @@ function selectHtml(
 	return isEmptyString ? null : text;
 }
 
-export const extractPageQuestions = ({ html }: ScrapedPage<QnaPageUrl>): QnaIdUrl[] => {
+export const extractPageQuestions = (
+	{ html }: ScrapedPage<QnaPageUrl>,
+	selectorOverrides?: Partial<ScrapingSelectors>,
+): QnaIdUrl[] => {
 	const $ = cheerio.load(html);
-	return $(SELECTORS.URLS)
+	return $(selectorOverrides?.URLS ?? SELECTORS.URLS)
 		.toArray()
 		.map((el) => $(el).attr("href"))
 		.filter((s): s is QnaIdUrl => s !== undefined);
 };
 
-export const extractPageCount = ({ html }: ScrapedPage<QnaHomeUrl>): number => {
+export const extractPageCount = (
+	{ html }: ScrapedPage<QnaHomeUrl>,
+	selectorOverrides?: Partial<ScrapingSelectors>,
+): number => {
 	const $ = cheerio.load(html);
-	const el = $(SELECTORS.PAGE_COUNT);
+	const el = $(selectorOverrides?.PAGE_COUNT ?? SELECTORS.PAGE_COUNT);
 	return Number.isNaN(Number.parseInt(el.text())) ? 1 : Number.parseInt(el.text());
 };
 
-export const extractQuestion = ({ html, url }: ScrapedPage<QnaIdUrl>): Question => {
+export const extractQuestion = (
+	{ html, url }: ScrapedPage<QnaIdUrl>,
+	selectorOverrides?: Partial<ScrapingSelectors>,
+): Question => {
 	const $ = cheerio.load(html);
 
 	const { id, program, season } = parseQnaUrlWithId(url);
-	const author = selectHtml($, "AUTHOR", true);
-	const title = selectHtml($, "TITLE", true);
-	const question = selectHtml($, "QUESTION", true);
-	const questionRaw = selectHtml($, "QUESTION", true, true);
-	const answer = selectHtml($, "ANSWER", false);
-	const answerRaw = selectHtml($, "ANSWER", false, true);
-	const askedTimestamp = selectHtml($, "ASKED_TIMESTAMP", true);
+	const author = selectHtml($, "AUTHOR", true, false, selectorOverrides);
+	const title = selectHtml($, "TITLE", true, false, selectorOverrides);
+	const question = selectHtml($, "QUESTION", true, false, selectorOverrides);
+	const questionRaw = selectHtml($, "QUESTION", true, true, selectorOverrides);
+	const answer = selectHtml($, "ANSWER", false, false, selectorOverrides);
+	const answerRaw = selectHtml($, "ANSWER", false, true, selectorOverrides);
+	const askedTimestamp = selectHtml($, "ASKED_TIMESTAMP", true, false, selectorOverrides);
 	const askedTimestampMs = new Date(askedTimestamp).getTime();
-	const answeredTimestamp = selectHtml($, "ANSWERED_TIMESTAMP", false);
+	const answeredTimestamp = selectHtml($, "ANSWERED_TIMESTAMP", false, false, selectorOverrides);
 	const answeredTimestampMs =
 		answeredTimestamp !== null ? new Date(answeredTimestamp).getTime() : null;
 	const answered = answer !== null;
-	const tags = $(SELECTORS.TAGS)
+	const tags = $(selectorOverrides?.TAGS ?? SELECTORS.TAGS)
 		.map((_i, el) => unleak($(el).text().trim()))
 		.get();
 
@@ -103,7 +115,10 @@ export const extractQuestion = ({ html, url }: ScrapedPage<QnaIdUrl>): Question 
 	};
 };
 
-export const extractReadOnly = ({ html }: ScrapedPage<QnaHomeUrl>): boolean => {
+export const extractReadOnly = (
+	{ html }: ScrapedPage<QnaHomeUrl>,
+	selectorOverrides?: Partial<ScrapingSelectors>,
+): boolean => {
 	const $ = cheerio.load(html);
-	return selectHtml($, "READONLY", false) !== null;
+	return selectHtml($, "READONLY", false, false, selectorOverrides) !== null;
 };
