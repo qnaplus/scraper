@@ -288,7 +288,7 @@ export const fetchQuestionRange = async (
 	const range = ids.map(async (id) => {
 		const url = buildQnaUrlWithId({
 			program: "V5RC",
-			season: "2020-2021",
+			season: "2026-2027",
 			id: `${id}`,
 		});
 		const page = await client.getHtml(url);
@@ -344,8 +344,12 @@ export const handleIterativeBatch = (
 	const failures: string[] = [];
 	for (let i = 0; i < results.length; i++) {
 		const result = results[i];
-		if (result.status === "rejected" || result.value === null) {
-			failures.push(`${range[i]}`);
+		if (result.status === "rejected") {
+			failures.push(`${range[i]} - ${result.reason}`);
+			continue;
+		}
+		if (result.value === null) {
+			failures.push(`${range[i]} - unable to fetch content for page.`);
 			continue;
 		}
 		questions.push(result.value);
