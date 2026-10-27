@@ -288,7 +288,7 @@ export const fetchQuestionRange = async (
 	const range = ids.map(async (id) => {
 		const url = buildQnaUrlWithId({
 			program: "V5RC",
-			season: "2020-2021",
+			season: "2026-2027",
 			id: `${id}`,
 		});
 		const page = await client.getHtml(url);
